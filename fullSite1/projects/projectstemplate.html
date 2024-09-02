@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{Category} Projects - NyX Code Alchemist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/general.css">
+    <link rel="stylesheet" href="../styles/navigation.css">
+    <link rel="stylesheet" href="../styles/projects.css">
+</head>
+<body>
+    <header>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="../index.html">About</a></li>
+                <li class="has-submenu">
+                    <a href="../projects.html" id="desktop-projects">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="code.html">Code</a></li>
+                        <li><a href="electro.html">Electro</a></li>
+                        <li><a href="design.html">Design</a></li>
+                        <li><a href="artwork.html">Artwork</a></li>
+                    </ul>
+                </li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-background"></div>
+
+        <nav class="menu-content">
+            <a href="../index.html" class="menu-item">About</a>
+            <a href="../projects.html" class="menu-item menu-item-with-submenu" id="mobile-projects">Projects</a>
+            <div class="submenu">
+                <a href="code.html" class="submenu-item">Code</a>
+                <a href="electro.html" class="submenu-item">Electro</a>
+                <a href="design.html" class="submenu-item">Design</a>
+                <a href="artwork.html" class="submenu-item">Artwork</a>
+            </div>
+            <a href="../contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <h1>{Category} Projects</h1>
+                <div id="projects-container"></div>
+                <button id="load-more" class="btn btn-secondary">Load More</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NyX Code Alchemist. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="project-dialog" class="dialog">
+        <div class="dialog-content">
+            <span class="close">&times;</span>
+            <h2 id="dialog-title"></h2>
+            <div id="dialog-content"></div>
+        </div>
+    </div>
+
+    <script src="../js/navigation.js"></script>
+    <script src="../js/projects.js"></script>
+</body>
+</html>

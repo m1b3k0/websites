@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyX Code Alchemist - Projects Showcase</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/components4.css">
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <nav class="desktopMenu-container">
+            <ul class="desktopMenu">
+                <li class="desktopMenu-item"><a href="index.html">HOME</a></li>
+                <li class="desktopMenu-item"><a href="about.html">ABOUT</a></li>
+                <li class="desktopMenu-item">
+                    <a href="projects2.html">PROJECTS</a>
+                    <div class="desktopMenusubmenu">
+                        <a href="#code">Code</a>
+                        <a href="#electro">Electro</a>
+                        <a href="#design">Design</a>
+                        <a href="#artwork">Artwork</a>
+                    </div>
+                </li>
+                <li class="desktopMenu-item"><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <label for="menu-toggle" class="menu-toggle-label">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+
+    <nav class="menu-content">
+        <a href="about.html" class="menu-item">About</a>
+        <div class="menu-item-with-submenu">
+            <input type="checkbox" id="submenu-toggle" class="submenu-toggle">
+            <label for="submenu-toggle" class="menu-item">Projects</label>
+            <div class="submenu">
+                <a href="#code" class="submenu-item">Code</a>
+                <a href="#electro" class="submenu-item">Electro</a>
+                <a href="#design" class="submenu-item">Design</a>
+                <a href="#artwork" class="submenu-item">Artwork</a>
+            </div>
+        </div>
+        <a href="contact.html" class="menu-item">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home" class="hero parallax-section">
+            <div class="container">
+                <h1 class="glitch" data-text="My Projects">My Projects</h1>
+                <p class="subtitle">Transforming ideas into digital reality</p>
+                <a href="#projects" class="btn btn-primary scroll-animate"><i class="lni lni-arrow-down"></i> View Projects</a>
+            </div>
+        </section>
+
+        <section id="featured-project" class="featured-project scroll-animate">
+            <div class="container">
+                <h2><i class="lni lni-star-filled animated-icon"></i> Featured Project</h2>
+                <div class="project-showcase">
+                    <div class="product-gallery">
+                        <img class="main-image lazy-image" data-src="https://placehold.co/600x400" width="600" height="400" alt="AI-Powered Chat Application">
+                        
+                        <div class="thumbnails">
+                            <img class="thumbnail lazy-image" data-src="https://placehold.co/100x100" width="100" height="100" alt="Thumbnail 1">
+                            <img class="thumbnail lazy-image" data-src="https://placehold.co/100x100" width="100" height="100" alt="Thumbnail 2">
+                            <img class="thumbnail lazy-image" data-src="https://placehold.co/100x100" width="100" height="100" alt="Thumbnail 3">
+                        </div>
+                    </div>
+                
+                    <div class="project-info">
+                        <h3>AI-Powered Chat Application</h3>
+                        <p>A real-time chat application with AI-driven response suggestions and sentiment analysis.</p>
+                        <a href="#" class="btn btn-primary">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="project-grid scroll-animate">
+            <div class="container">
+                <h2><i class="lni lni-grid-alt animated-icon"></i> Recent Projects</h2>
+                <div class="grid">
+                    <article class="project-card scroll-animate toggle-visibility">
+                        <img src="https://placehold.co/400x300" data-src="https://placehold.co/800x600" alt="E-commerce Platform" class="lazy-image">
+                        <div class="card-content">
+                            <h3><i class="lni lni-shopping-basket"></i> E-commerce Platform</h3>
+                            <p>A fully responsive e-commerce platform with integrated payment gateways and inventory management.</p>
+                            <a href="#" class="btn btn-secondary"><i class="lni lni-arrow-right"></i> Learn More</a>
+                        </div>
+                    </article>
+                    <article class="project-card scroll-animate toggle-visibility">
+                        <img src="https://placehold.co/400x300" data-src="https://placehold.co/800x600" alt="Portfolio Website" class="lazy-image">
+                        <div class="card-content">
+                            <h3><i class="lni lni-website"></i> Portfolio Website</h3>
+                            <p>A dynamic portfolio website showcasing creative works with a custom CMS for easy updates.</p>
+                            <a href="#" class="btn btn-secondary"><i class="lni lni-arrow-right"></i> Learn More</a>
+                        </div>
+                    </article>
+                    <article class="project-card scroll-animate toggle-visibility">
+                        <img src="https://placehold.co/400x300" data-src="https://placehold.co/800x600" alt="Mobile Fitness App" class="lazy-image">
+                        <div class="card-content">
+                            <h3><i class="lni lni-pulse"></i> Mobile Fitness App</h3>
+                            <p>A cross-platform mobile app for tracking workouts, nutrition, and providing personalized fitness plans.</p>
+                            <a href="#" class="btn btn-secondary"><i class="lni lni-arrow-right"></i> Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="testimonials scroll-animate">
+            <div class="container">
+                <h2><i class="lni lni-quotation animated-icon"></i> What Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial active">
+                        <blockquote>"The AI chat application developed by NyX has revolutionized our customer service. It's intuitive, efficient, and our customers love it!"</blockquote>
+                        - John Smith, CTO of ServicePro
+                    </div>
+                    <div class="testimonial">
+                        <blockquote>"Working with NyX was an absolute pleasure. Their ability to transform our ideas into a functional and beautiful digital product exceeded our expectations."</blockquote>
+                        - Jane Doe, CEO of TechInnovate
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="skills scroll-animate">
+            <div class="container">
+                <h2><i class="lni lni-code animated-icon"></i> Skills & Technologies</h2>
+                <div class="skill-grid">
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-javascript animated-icon"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-react animated-icon"></i>
+                        <span>React</span>
+                    </div>
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-nodejs animated-icon"></i>
+                        <span>Node.js</span>
+                    </div>
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-python animated-icon"></i>
+                        <span>Python</span>
+                    </div>
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-aws animated-icon"></i>
+                        <span>AWS</span>
+                    </div>
+                    <div class="skill-item scroll-animate toggle-visibility">
+                        <i class="lni lni-docker animated-icon"></i>
+                        <span>Docker</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="cta parallax-section scroll-animate">
+            <div class="container">
+                <h2><i class="lni lni-pencil animated-icon"></i> Ready to bring your ideas to life?</h2>
+                <p>Let's collaborate and create something extraordinary together.</p>
+                <a href="#contact-form" class="btn btn-large"><i class="lni lni-envelope"></i> Get in Touch</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="lni lni-code-alt"></i> NyX Code Alchemist</h3>
+                    <p>Transforming ideas into digital reality since 2020.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home"><i class="lni lni-chevron-right"></i> Home</a></li>
+                        <li><a href="#projects"><i class="lni lni-chevron-right"></i> Projects</a></li>
+                        <li><a href="about.html"><i class="lni lni-chevron-right"></i> About</a></li>
+                        <li><a href="contact.html"><i class="lni lni-chevron-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="lni lni-github-original"></i></a>
+                        <a href="#" class="social-icon"><i class="lni lni-linkedin-original"></i></a>
+                        <a href="#" class="social-icon"><i class="lni lni-twitter-original"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NyX Code Alchemist. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="scroll-progress"></div>
+    <button class="dark-mode-toggle" aria-label="Toggle Dark Mode">🌓</button>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-medium);
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-content {
+    padding: 4rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.skills {
+    margin-top: 2rem;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills li {
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

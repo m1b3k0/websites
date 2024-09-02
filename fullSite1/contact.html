@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - NyX Code Alchemist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/contact.css">
+</head>
+<body>
+    <header>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li class="has-submenu">
+                    <a href="projects.html" id="desktop-projects">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="projects/code.html">Code</a></li>
+                        <li><a href="projects/electro.html">Electro</a></li>
+                        <li><a href="projects/design.html">Design</a></li>
+                        <li><a href="projects/artwork.html">Artwork</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-background"></div>
+
+        <nav class="menu-content">
+            <a href="index.html" class="menu-item">About</a>
+            <a href="projects.html" class="menu-item menu-item-with-submenu" id="mobile-projects">Projects</a>
+            <div class="submenu">
+                <a href="projects/code.html" class="submenu-item">Code</a>
+                <a href="projects/electro.html" class="submenu-item">Electro</a>
+                <a href="projects/design.html" class="submenu-item">Design</a>
+                <a href="projects/artwork.html" class="submenu-item">Artwork</a>
+            </div>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h1>Contact Me</h1>
+                <p class="subtitle">Have a question or want to work together? Let's connect!</p>
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NyX Code Alchemist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/navigation.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+</html>

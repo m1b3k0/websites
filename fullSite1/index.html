@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyX Code Alchemist - Personal Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/general.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <nav class="desktop-menu">
+            <ul>
+                <li><a href="index.html">About</a></li>
+                <li class="has-submenu">
+                    <a href="projects.html" id="desktop-projects">Projects</a>
+                    <ul class="submenu">
+                        <li><a href="projects/code.html">Code</a></li>
+                        <li><a href="projects/electro.html">Electro</a></li>
+                        <li><a href="projects/design.html">Design</a></li>
+                        <li><a href="projects/artwork.html">Artwork</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <button class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <div class="menu-background"></div>
+
+        <nav class="menu-content">
+            <a href="index.html" class="menu-item">About</a>
+            <a href="projects.html" class="menu-item menu-item-with-submenu" id="mobile-projects">Projects</a>
+            <div class="submenu">
+                <a href="projects/code.html" class="submenu-item">Code</a>
+                <a href="projects/electro.html" class="submenu-item">Electro</a>
+                <a href="projects/design.html" class="submenu-item">Design</a>
+                <a href="projects/artwork.html" class="submenu-item">Artwork</a>
+            </div>
+            <a href="contact.html" class="menu-item">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="hero">
+            <div class="hero-content">
+                <h1>NyX Code Alchemist</h1>
+                <p>Transforming ideas into digital reality</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary">View Projects</a>
+                    <a href="contact.html" class="btn btn-secondary">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-content">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-image">
+                        <img src="images/profile-image.jpg" alt="NyX" class="avatar">
+                    </div>
+                    <div class="about-text">
+                        <h2>About Me</h2>
+                        <p>I am NyX, a digital sorcerer who transforms lines of code into mesmerizing digital experiences. With a background in arts, design, and computer science, I blend the mystical with the technological to create web applications that are not just functional, but truly enchanting.</p>
+                        
+                        <div class="skills">
+                            <h3>Key Skills</h3>
+                            <ul>
+                                <li>Full-stack Web Development</li>
+                                <li>UI/UX Design</li>
+                                <li>Machine Learning & AI</li>
+                                <li>Creative Coding & Generative Art</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 NyX Code Alchemist. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+/* General Layout */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background-color: var(--color-medium);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: var(--color-accent);
+    color: white;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-accent);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-large {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+}
+
+.btn-text {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+/* Feature Grid */
+.feature-grid {
+    padding: 80px 0;
+    background-color: var(--color-dark);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.grid-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-medium);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 1rem;
+}
+
+/* Content with Image */
+.content-with-image {
+    padding: 80px 0;
+    background-color: var(--color-neutral);
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.content {
+    flex: 1;
+}
+
+.image {
+    flex: 1;
+}
+
+.rounded-image {
+    border-radius: 50%;
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Featured Project */
+.featured-project {
+    padding: 80px 0;
+    background-color: var(--color-dark);
+}
+
+.project-showcase {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.project-image {
+    flex: 1;
+    max-width: 50%;
+    border-radius: 8px;
+}
+
+.project-details {
+    flex: 1;
+}
+
+/* Testimonial */
+.testimonial {
+    padding: 80px 0;
+    background-color: var(--color-medium);
+    text-align: center;
+}
+
+blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+cite {
+    font-size: 1rem;
+    font-style: normal;
+}
+
+/* CTA Section */
+.cta-section {
+    padding: 100px 0;
+    background-color: var(--color-accent);
+    text-align: center;
+}
+
+/* Footer */
+.site-footer {
+    background-color: var(--color-dark);
+    padding: 60px 0 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-column h4 {
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-bottom {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content-wrapper,
+    .project-showcase {
+        flex-direction: column;
+    }
+
+    .project-image {
+        max-width: 100%;
+    }
+}

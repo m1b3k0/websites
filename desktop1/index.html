@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant and Sophisticated Menu</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&display=swap');
+
+        :root {
+            --color-dark: #30292F;
+            --color-medium: #413F54;
+            --color-light: #5F5AA2;
+            --color-accent: #355691;
+            --color-neutral: #3F4045;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Cormorant Garamond', serif;
+            background-color: var(--color-dark);
+            color: white;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .menu-container {
+            position: fixed;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(65, 63, 84, 0.8);
+            backdrop-filter: blur(10px);
+            border-radius: 5px;
+            padding: 0px 0px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu-item {
+            margin: 0 15px;
+            position: relative;
+        }
+
+        .menu-item a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 15px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .menu-item a:hover {
+            color: var(--color-light);
+        }
+
+        .menu-item::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background-color: var(--color-light);
+            transition: all 0.3s ease;
+        }
+
+        .menu-item:hover::after,
+        .menu-item.active::after {
+            width: 100%;
+            left: 0;
+        }
+
+        .submenu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background-color: rgba(95, 90, 162, 0.9);
+            backdrop-filter: blur(10px);
+            min-width: 200px;
+            border-radius: 15px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            overflow: hidden;
+        }
+
+        .submenu::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid rgba(95, 90, 162, 0.9);
+        }
+
+        .menu-item:hover .submenu,
+        .menu-item.active .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(10px);
+        }
+
+        .submenu a {
+            color: white;
+            padding: 12px 20px;
+            display: block;
+            transition: all 0.3s ease;
+        }
+
+        .submenu a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .rectangle {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60vw;
+            height: 70vh;
+            border: 2px solid var(--color-light);
+            box-shadow: 0 0 50px rgba(95, 90, 162, 0.3);
+            z-index: -1;
+            opacity: 0.5;
+            transition: all 0.5s ease;
+        }
+
+        .menu-item:hover ~ .rectangle,
+        .menu-item.active ~ .rectangle {
+            border-color: var(--color-accent);
+            box-shadow: 0 0 100px rgba(53, 86, 145, 0.5);
+            opacity: 0.8;
+        }
+
+        @keyframes subtle-float {
+            0%, 100% { transform: translate(-50%, -50%); }
+            50% { transform: translate(-50%, -52%); }
+        }
+
+        .rectangle {
+            animation: subtle-float 5s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <ul class="menu">
+            <li class="menu-item"><a href="#">Home</a></li>
+            <li class="menu-item"><a href="#">About</a></li>
+            <li class="menu-item" id="projects-menu">
+                <a href="#" id="projects-link">Projects</a>
+                <div class="submenu">
+                    <a href="#">Code</a>
+                    <a href="#">Electro</a>
+                    <a href="#">Design</a>
+                    <a href="#">Artwork</a>
+                </div>
+            </li>
+            <li class="menu-item"><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="rectangle"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const projectsMenu = document.getElementById('projects-menu');
+            const projectsLink = document.getElementById('projects-link');
+
+            projectsLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                projectsMenu.classList.toggle('active');
+            });
+
+            projectsMenu.addEventListener('mouseenter', function() {
+                this.classList.add('active');
+            });
+
+            projectsMenu.addEventListener('mouseleave', function() {
+                if (!this.contains(document.activeElement)) {
+                    this.classList.remove('active');
+                }
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!projectsMenu.contains(e.target)) {
+                    projectsMenu.classList.remove('active');
+                }
+            });
+
+            // Subtle parallax effect on rectangle
+            document.addEventListener('mousemove', function(e) {
+                const rectangle = document.querySelector('.rectangle');
+                const xAxis = (window.innerWidth / 2 - e.pageX) / 25;
+                const yAxis = (window.innerHeight / 2 - e.pageY) / 25;
+                rectangle.style.transform = `translate(-50%, -50%) rotateY(${xAxis}deg) rotateX(${yAxis}deg)`;
+            });
+        });
+    </script>
+</body>
+</html>

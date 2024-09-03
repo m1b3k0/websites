@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - TONDA</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/navigation.css">
+    <link rel="stylesheet" href="styles/components.css">
+</head>
+<body>
+    <header class="desktopMenu-container">
+        <nav class="desktopMenu">
+            <li class="desktopMenu-item"><a href="index.html">HOME</a></li>
+            <li class="desktopMenu-item"><a href="about.html">SHOP</a></li>
+            <li class="desktopMenu-item">
+                <a href="project.html">COLLECTIONS</a>
+                <ul class="desktopMenusubmenu">
+                    <li><a href="#">Sets</a></li>
+                    <li><a href="#">Plates</a></li>
+                    <li><a href="#">Bowls</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li class="desktopMenu-item"><a href="contact.html">ABOUT ME</a></li>
+            <li class="desktopMenu-item"><a href="contact.html">TEAM</a></li>
+            <li class="desktopMenu-item"><a href="about.html">CONTACT</a></li>
+        </nav>
+        <div class="logo">
+            <img src="images/tonda-logo.png" alt="TONDA logo">
+        </div>
+    </header>
+
+    <main role="main">
+        <section class="hero">
+            <div class="container">
+                <h1 class="hero-title">CONTACT US</h1>
+                <p class="hero-subtitle">Get in touch with us for any inquiries or custom orders.</p>
+            </div>
+        </section>
+
+        <section class="contact-content">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2 class="section-title">Get In Touch</h2>
+                        <p>We'd love to hear from you. Whether you have a question about our products, custom orders, or anything else, our team is ready to answer all your questions.</p>
+                        <ul class="contact-details">
+                            <li>
+                                <strong>Email:</strong>
+                                <a href="mailto:info@tonda.com">info@tonda.com</a>
+                            </li>
+                            <li>
+                                <strong>Phone:</strong>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </li>
+                            <li>
+                                <strong>Address:</strong>
+                                <address>123 Pottery Lane, Ceramic City, PC 12345</address>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contact-form">
+                        <h2 class="section-title">Send Us a Message</h2>
+                        <form action="#" method="POST">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Process</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Care</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 TONDA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="menu-content">
+        <nav class="desktopMenu">
+            <li class="desktopMenu-item"><a href="index.html">HOME</a></li>
+            <li class="desktopMenu-item"><a href="about.html">SHOP</a></li>
+            <li class="desktopMenu-item menu-item-with-submenu">
+                <input type="checkbox" id="collections-submenu" class="submenu-toggle">
+                <label for="collections-submenu">COLLECTIONS</label>
+                <ul class="desktopMenusubmenu">
+                    <li><a href="#">Sets</a></li>
+                    <li><a href="#">Plates</a></li>
+                    <li><a href="#">Bowls</a></li>
+                    <li><a href="#">Accessories</a></li>
+                </ul>
+            </li>
+            <li class="desktopMenu-item"><a href="contact.html">ABOUT ME</a></li>
+            <li class="desktopMenu-item"><a href="contact.html">TEAM</a></li>
+            <li class="desktopMenu-item"><a href="about.html">CONTACT</a></li>
+        </nav>
+    </div>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

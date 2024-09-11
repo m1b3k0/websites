@@ -1,0 +1,217 @@
+/* Add to main.css */
+.about-page {
+    padding-top: 0px;
+}
+
+.about-hero {
+    background-color: var(--color-background-light);
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.about-hero .subtitle {
+    font-size: 24px;
+    color: var(--color-text-light);
+}
+
+.about-intro, .about-passion, .about-sustainability, .about-gallery, .about-legacy {
+    padding: 80px 0;
+}
+
+.text-image-layout {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.text-image-layout.reverse {
+    flex-direction: row-reverse;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.image-content {
+    flex: 1;
+}
+
+.portrait-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.landscape-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.expandable-text .full-text,
+.expandable-text .read-more {
+    display: none;
+}
+
+.expandable-text.expanded .full-text {
+    display: block;
+}
+
+.expandable-text.expanded .preview {
+    display: none;
+}
+
+.read-more {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+/* Continuation of main.css additions */
+/* Replace the vertical-gallery styles in main.css with these */
+.horizontal-gallery {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding-bottom: 20px;
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-primary) var(--color-background-light);
+}
+
+.horizontal-gallery::-webkit-scrollbar {
+    height: 8px;
+}
+
+.horizontal-gallery::-webkit-scrollbar-track {
+    background: var(--color-background-light);
+}
+
+.horizontal-gallery::-webkit-scrollbar-thumb {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+}
+
+.gallery-item {
+    flex: 0 0 auto;
+    width: calc(20% - 16px);
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-item .overlay p {
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+
+/* Add to components.css */
+.btn-secondary {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-background);
+}
+
+.horizontal-gallery {
+    cursor: grab;
+    user-select: none;
+}
+
+.horizontal-gallery.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+}
+
+.horizontal-gallery.active img {
+    pointer-events: none;
+}
+
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .gallery-item {
+        width: calc(25% - 15px);
+    }
+}
+
+@media (max-width: 992px) {
+    .gallery-item {
+        width: calc(33.33% - 13.33px);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 36px;
+    }
+
+    .about-hero .subtitle {
+        font-size: 20px;
+    }
+
+    .text-image-layout,
+    .text-image-layout.reverse {
+        flex-direction: column;
+    }
+
+    .image-content {
+        order: -1;
+    }
+
+    .gallery-item {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
+}

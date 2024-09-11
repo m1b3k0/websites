@@ -1,0 +1,136 @@
+.icon {
+    width: 250px;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+.containerHero {
+   
+    margin: 8rem 0rem 0 0;
+    padding: 0 0px;
+   
+}
+.containerRest {
+   
+    margin: 2.1rem 3rem 0rem  3rem;
+    padding: 0 0px;
+   
+}
+
+.containerQuota {
+   
+    margin: 0rem 3rem 0rem  3rem;
+    padding: 3.5rem 0 3rem 0;
+   
+}
+
+.containerBuyNow {
+   
+    padding: 3.1rem 0px;
+   
+}
+
+.containerFooter {
+   
+    margin: 0rem 3rem 0rem 3rem;
+    padding: 0 0px;
+   
+}
+
+
+.grid-item {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover {
+    transform: translateY(-5px);
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+.btn-text {
+    background-color: transparent;
+    color: var(--color-primary);
+    padding: 0;
+    text-decoration: underline;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: var(--color-text);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--color-primary);
+}
+
+.scroll-animate {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animate.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.parallax-section {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testimonial-slider {
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial {
+    text-align: center;
+    padding: 20px;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.skill-item {
+    padding: 10px;
+    background-color: var(--color-background-light);
+    border-radius: 8px;
+}
+
+.toggle-visibility {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.toggle-visibility.visible {
+    opacity: 1;
+}
+
+.scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--color-primary);
+    z-index: 9999;
+    transition: width 0.2s ease-out;
+}

@@ -1,0 +1,235 @@
+.desktopMenu-container {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #F7F7F5;
+    backdrop-filter: blur(10px);
+    padding: 0px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.desktopMenu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 8px 0px;
+    margin: 0;
+}
+
+.desktopMenu-item {
+    margin: 0 15px;
+    position: relative;
+}
+
+.desktopMenu-item a {
+    color: #30292F;
+    text-decoration: none;
+    font-size: 15px;
+    padding: 4px 10px;
+    display: block;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.desktopMenu-item a:hover {
+    color: rgb(176, 150, 125);
+}
+
+.desktopMenusubmenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(247, 247, 245, 1);
+    min-width: 150px;
+    padding: 0px 0px 5px 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.desktopMenu-item:hover .desktopMenusubmenu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.desktopMenusubmenu li {
+    display: block;
+}
+
+.desktopMenusubmenu a {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+/* Arrow for Collections menu item */
+.desktopMenu-item > a[href="project.html"]::after {
+    content: '▲';
+    display: inline-block;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.desktopMenu-item:hover > a[href="project.html"]::after,
+.desktopMenu-item:focus-within > a[href="project.html"]::after {
+    transform: rotate(180deg);
+}
+
+.logo {
+    text-align: center;
+  margin: 12px 20px 0px 20px;
+    margin-top: 12px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+}
+
+.logo img {
+    height: 20px;
+    vertical-align: bottom;
+}
+
+/* Mobile Menu Styles */
+.menu-toggle,
+.menu-toggle-label {
+    display: none;
+}
+.menu-content{
+    display: none;
+}
+
+/* Desktop submenu on hover */
+@media screen and (min-width: 769px) {
+    .desktopMenu-item:hover .desktopMenusubmenu,
+    .desktopMenu-item:focus-within .desktopMenusubmenu {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+@media (max-width: 768px) {
+    .desktopMenu-container {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    .menu-toggle-label {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1001;
+        cursor: pointer;
+        width: 30px;
+        height: 20px;
+    }
+
+    .menu-toggle-label span {
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #30292F;
+        position: absolute;
+        transition: .25s ease-in-out;
+    }
+
+    .menu-toggle-label span:nth-child(1) { top: 0; }
+    .menu-toggle-label span:nth-child(2) { top: 9px; }
+    .menu-toggle-label span:nth-child(3) { top: 18px; }
+
+    .menu-content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #F7F7F5;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.6s ease, visibility 0.6s ease;
+        z-index: 1000;
+    }
+
+    .menu-toggle:checked ~ .menu-content {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .menu-toggle:checked ~ .menu-toggle-label span:nth-child(1) {
+        top: 9px;
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle:checked ~ .menu-toggle-label span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle:checked ~ .menu-toggle-label span:nth-child(3) {
+        top: 9px;
+        transform: rotate(-45deg);
+    }
+
+    .mobile-menu {
+        list-style-type: none;
+        padding: 0;
+        text-align: center;
+    }
+
+    .mobile-menu .desktopMenu-item {
+        margin: 15px 0;
+    }
+
+    .mobile-menu .desktopMenu-item a {
+        font-size: 18px;
+    }
+
+    .mobile-menu .desktopMenusubmenu {
+        position: static;
+        background-color: transparent;
+        opacity: 1;
+        visibility: visible;
+        display: none;
+    }
+
+     /* Mobile submenu on click */
+     .mobile-menu .desktopMenu-item > a[href="project.html"] {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .mobile-menu .desktopMenu-item > a[href="project.html"]::after {
+        content: '▲';
+        display: inline-block;
+        margin-left: 5px;
+        transition: transform 0.3s ease;
+       
+    }
+
+    .mobile-menu .desktopMenu-item > input:checked + a[href="project.html"]::after {
+        transform: rotate(180deg);
+    }
+
+    .mobile-menu .desktopMenusubmenu {
+        display: none;
+    }
+
+    .mobile-menu .desktopMenu-item > input:checked ~ .desktopMenusubmenu {
+        display: block;
+    }
+   
+    
+}
